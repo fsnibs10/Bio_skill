@@ -1,0 +1,14 @@
+# conda add
+conda config -add channels defaults
+conda config -add channels bioconda
+conda config -add channels conda-forge
+
+# conda install
+conda install bwa
+conda create -n aligners bwa bowtie hisat sta
+
+conda -version # version
+conda update conda # update
+conda create -n python3 # create new envrionment
+source activate python3
+conda info -envs # list all environments, current setting is started with "*"
