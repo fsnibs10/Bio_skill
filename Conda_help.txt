@@ -12,3 +12,14 @@ conda update conda # update
 conda create -n python3 # create new envrionment
 source activate python3
 conda info -envs # list all environments, current setting is started with "*"
+
+source activate base # switch to base envrionment
+source deactivate # return envrionment
+conda create -n python3 python=3  # install python3 under new envrionment
+python --version  # check python version
+conda list  # check package 
+
+conda search somepackage # whether one package can be installed
+conda install -name base somepackage # install package under one envrionment
+conda remove -n base somepackage # remove one package under specific envrionment
+conda remove -n python3 -all  # remove one envrionment
