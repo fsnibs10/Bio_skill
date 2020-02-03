@@ -1,0 +1,36 @@
+############### 
+batchly get screenshot images
+###############
+# test on windows system
+(1) construct gene location file like below
+I 100 500 gene1
+II  300 800 gene2
+
+(2) run customed script, which is used to output IGV script file
+perl construct_igv_file.pl
+
+the output file is named as "sample.igv.batch.bat", like below:
+
+new
+snapshotDirectory E:/igvfile
+load sample1.sorted.bam
+goto II:11360-11405
+snapshot locus1.jpg
+goto III:945832-951589
+snapshot locus2.jpg
+goto I:1770925-17762203
+snapshot locus3.jpg
+
+
+(3) open IGV browser, run bat script
+open IGV -> Run Batch Script... -> select bat file
+# finally, in snapshotDirectory folder, you will find screenshot image.
+
+################
+bam -> tdf  
+################
+# test under windows system
+(1) load reference genome
+(2) open IGV -> Tools -> run igvtools...
+(3) select "one sorted bam file" on "Input File", the "Output File" can directly display filename.bam.tdf
+(4) under default settings, click "Run".
